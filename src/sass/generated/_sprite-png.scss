@@ -1,11 +1,11 @@
 $sprite: (
-	logo: (
+	sjr-logo: (
 		offset-x: 0px,
 		offset-y: 0px,
-		width: 300px,
-		height: 70px,
-		total-width: 300px,
-		total-height: 70px,
+		width: 150px,
+		height: 54px,
+		total-width: 150px,
+		total-height: 54px,
 		image: '../img/sprite.png'
 	),
 );
@@ -64,6 +64,6 @@ $sprite: (
 
 
 
-	.icon-logo {
-		@include sprite(logo)
+	.icon-sjr-logo {
+		@include sprite(sjr-logo)
 	}

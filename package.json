@@ -14,15 +14,12 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production",
-    "surge": "surge --project ./dist --domain khmelevskoy.surge.sh",
-    "deploy": "gulp build --production && surge --project ./dist --domain khmelevskoy.surge.sh"
+    "surge": "surge --project ./dist --domain tele2-sjr.surge.sh",
+    "deploy": "gulp build --production && surge --project ./dist --domain tele2-sjr.surge.sh"
   },
   "dependencies": {
-    "aos": "^2.3.4",
-    "barba.js": "^1.0.0",
     "gsap": "^2.0.2",
     "jquery": "^3.4.1",
-    "jquery-lazy": "^1.7.10",
     "jquery-mask-plugin": "^1.14.15",
     "jquery-selectric": "^0.1.3",
     "jquery-validation": "^1.19.1",

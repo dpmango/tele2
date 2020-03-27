@@ -1,1 +1,27 @@
 .hero
+  position: relative
+  color: $fontColor2
+  &__background
+    position: relative
+    z-index: 1
+    max-height: 430px
+    display: flex
+    flex-direction: column
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+
+  &__content
+    position: absolute
+    z-index: 2
+    top: 50%
+    transform: translateY(-50%)
+
+  &__title
+    font-family: $stencil
+    font-size: 40px
+    line-height: 1
+    text-transform: uppercase
+    font-weight: 700
+
