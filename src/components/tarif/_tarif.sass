@@ -1,0 +1,110 @@
+// tarif
+.tarif
+  margin: 45px 0 20px
+  &__title
+    font-family: $serif
+    font-size: 38px
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin: 25px -15px -15px
+  &__col
+    width: 100%
+    min-width: 1px
+    min-height: 0
+    padding: 15px
+    flex: 0 0 $col4
+    max-width: $col4
+
+
+// tarif card
+.tarif-card
+  border: 1px solid #D1DBD6
+  padding: 30px 20px
+  &__name
+    font-size: 20px
+  &__price
+    margin-top: 5px
+    display: flex
+    align-items: center
+  &__price-main
+    font-size: 52px
+    line-height: 1
+    margin-right: 10px
+  &__price-sub
+    display: flex
+    flex-direction: column
+  &__price-sign
+    font-size: 0
+    .ico
+      font-size: 16px
+  &__price-per
+    margin-top: 5px
+    font-size: 16px
+  &__benefits
+    margin: 15px 0
+    font-size: 16px
+    line-height: 1.92
+    span
+      display: block
+
+  &__icons
+    margin-top: 25px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+  &__icons-name
+    font-size: 14px
+    margin: 5px 10px 5px 0
+  &__icons-list
+    display: flex
+    margin: 0
+    padding: 0
+    li
+      position: relative
+      display: inline-block
+      border: 2px solid white
+      border-radius: 50%
+      margin-left: -7px
+      font-size: 0
+      .ico
+        font-size: 28px
+      &:first-child
+        margin-left: 0
+      &:nth-child(1)
+        z-index: 10
+      &:nth-child(2)
+        z-index: 9
+      &:nth-child(3)
+        z-index: 8
+      &:nth-child(4)
+        z-index: 7
+      &:nth-child(5)
+        z-index: 6
+      &:nth-child(6)
+        z-index: 5
+      &:nth-child(7)
+        z-index: 4
+      &:nth-child(8)
+        z-index: 3
+      &:nth-child(9)
+        z-index: 2
+      &:nth-child(10)
+        z-index: 1
+
+
+  &__cta
+    margin-top: 30px
+    display: flex
+    align-items: center
+  &__cta-button
+    flex: 0 0 auto
+  &__cta-link
+    a
+      display: inline-block
+      padding: 15px
+      font-size: 16px
+      font-weight: 700
+      transition: .25s $ease
+      &:hover
+        opacity: .6

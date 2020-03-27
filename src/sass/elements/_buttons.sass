@@ -19,17 +19,13 @@ button
     display: block
     width: 100%
 
-  &-example
-    // please use paddings instead of line-height to control btn height
-    background: $colorPrimary
-    font-size: 20px
-    padding: 15px 30px
-    color: white
-    transition: .25s $ease
-    transform-origin: center bottom
-    box-shadow: none
-    will-change: box-shadow, transform
+  &-primary
+    background: transparent
+    font-size: 16px
+    font-weight: 700
+    border: 2px solid $fontColor
+    border-radius: 30px
+    text-align: center
+    padding: 9px 30px
     &:hover
-      transform: scale(1.05) translateY(-5px)
-      background: rgba($colorPrimary, .9)
-      box-shadow: 0 15px 10px -15px rgba($fontColor, .4)
+      opacity: .6

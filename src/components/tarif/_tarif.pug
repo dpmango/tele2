@@ -1,0 +1,14 @@
+// tarif
+include _tarif-card
+
+.tarif
+  .container
+    .tarif__title Связь для журналистов
+
+    .tarif__grid
+      .tarif__col
+        +tarifCard({name: 'Компаньон S', price: '250'})
+      .tarif__col
+        +tarifCard({name: 'Компаньон M', price: '400'})
+      .tarif__col
+        +tarifCard({name: 'Компаньон L', price: '600'})

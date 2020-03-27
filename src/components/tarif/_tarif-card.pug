@@ -1,0 +1,46 @@
+mixin tarifCard(card)
+  // card
+  .tarif-card
+    .tarif-card__name!= card.name
+    .tarif-card__price
+      .tarif-card__price-main!= card.price
+      .tarif-card__price-sub
+        span.tarif-card__price-sign
+          +svgMono('rub')
+        span.tarif-card__price-per / месяц
+    .tarif-card__benefits
+      span <strong>20 Гб</strong> интернета
+      span <strong>100</strong> SMS
+      span <strong>500</strong> минут
+    .tarif-card__list
+      ul.ul-list
+        li Безлимитные звонки на Теле2
+        li Без доплат в поездках по России
+        li Переносим остатки на следующий месяц безлимитно
+        li <strong>Безлимитный интернет</strong> за 100 ₽/мес.
+
+    .tarif-card__icons
+      .tarif-card__icons-name Безлимитно:
+      ul.tarif-card__icons-list
+        li
+          +svgColor('social-whatsapp')
+        li
+          +svgColor('social-viber')
+        li
+          +svgColor('social-facebook')
+        li
+          +svgColor('social-vk')
+        li
+          +svgColor('social-ok')
+        li
+          +svgColor('social-ymaps')
+        li
+          +svgColor('social-ynav')
+        li
+          +svgColor('social-transport')
+
+    .tarif-card__cta
+      .tarif-card__cta-button
+        a(href='#').btn.btn-primary Выбрать тариф
+      .tarif-card__cta-link
+        a(href="#").js-popup Подробнее
