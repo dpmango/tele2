@@ -27,16 +27,10 @@
     },
     closeMobileMenu: function(isOnload) {
       $('[js-hamburger]').removeClass('is-active');
-      $('.mobile-navi').removeClass('is-active');
-
-      APP.Plugins.ScrollBlock.blockScroll(isOnload);
     },
     hamburgerClickListener: function() {
       _document.on('click', '[js-hamburger]', function() {
         $(this).toggleClass('is-active');
-        $('.mobile-navi').toggleClass('is-active');
-
-        APP.Plugins.ScrollBlock.blockScroll();
       });
     },
     // listenScroll: function() {

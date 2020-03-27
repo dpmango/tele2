@@ -2,3 +2,121 @@
 .form
   &__wrapper
     background: $colorBg
+    padding: 35px 50px 0
+  &__title
+    margin: 0 0 .5em
+  &__section
+    position: relative
+    padding: 25px 0 50px
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      left: -50px
+      right: -50px
+      bottom: 0
+      height: 1px
+      background: #F0F1F2
+    &:last-child
+      &::after
+        display: none
+    .ui-group
+      &:last-child
+        margin-bottom: 0
+
+  &__section-title
+    margin: 0 0 20px
+
+  &__radio-select
+    margin-top: 30px
+    padding-bottom: 35px
+    display: flex
+    &--two
+      .form__radio
+        flex-basis: 50%
+        max-width: 50%
+    &--three
+      .form__radio
+        flex-basis: $col4
+        max-width: $col4
+  &__radio
+    display: flex
+    flex-direction: column
+    width: 100%
+    min-width: 1px
+    min-height: 0
+    position: relative
+    input
+      position: absolute
+      top: 0
+      left: 0
+      width: 0.1px
+      height: 0.1px
+      opacity: 0
+      pointer-events: none
+      &:checked
+        + label
+          &::before
+            top: -10px
+            bottom: -10px
+            background: $colorPrimary
+          .form__radio-desc
+            color: $fontColor
+          .form__radio-hidden
+            opacity: 1
+            pointer-events: all
+    label
+      flex: 1 0 auto
+      display: flex
+      flex-direction: column
+      justify-content: center
+      width: 100%
+      position: relative
+      cursor: pointer
+      text-align: center
+      // background: #E8E8ED
+      padding: 15px
+      &::before
+        display: inline-block
+        content: ' '
+        position: absolute 0
+        background: #E8E8ED
+        transition: .25s $ease
+      &:hover
+        &::before
+          background: #F0F1F2
+
+
+  &__radio-text
+    position: relative
+    z-index: 2
+    font-size: 22px
+    line-height: 1.27
+  &__radio-desc
+    position: relative
+    z-index: 2
+    font-size: 16px
+    line-height: 1.375
+    color: #8F9399
+    transition: .25s $ease
+  &__radio-hidden
+    position: absolute
+    z-index: 2
+    bottom: -35px
+    left: 0
+    font-size: 14px
+    transition: .25s $ease
+    opacity: 0
+    pointer-events: none
+
+
+  &__checkbox
+
+  &__cta
+    margin-top: 35px
+
+  &__terms
+    margin-top: 10px
+    font-size: 16px
+    line-height: 1.375
+    color: #83949E

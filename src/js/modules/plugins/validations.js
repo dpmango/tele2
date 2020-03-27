@@ -8,7 +8,6 @@
     init: function() {
       this.localize();
       this.validateFormsConstructor();
-      this.validateFormsCustom();
     },
     data: {
       // GENERIC FUNCTIONS
@@ -42,23 +41,14 @@
       },
       validateSubmitHandler: function(form) {
         $(form).addClass('loading');
-        $.ajax({
-          type: 'POST',
-          url: $(form).attr('action'),
-          data: $(form).serialize(),
-          success: function(response) {
-            $(form).removeClass('loading');
-            var data = $.parseJSON(response);
-            if (data.status === 'success') {
-              // do something I can't test
-            } else {
-              $(form)
-                .find('[data-error]')
-                .html(data.message)
-                .show();
-            }
-          },
-        });
+        var formData = $(form).serialize();
+        var sucessFunction = $(form).data('success-function');
+        if (sucessFunction !== undefined) {
+          var x = eval(sucessFunction);
+          if (typeof x == 'function') {
+            x(formData);
+          }
+        }
       },
       masks: {
         phone: {
@@ -106,7 +96,7 @@
     validateFormsConstructor: function() {
       var _this = this;
 
-      var $forms = $('[js-validate-form]:not(.is-validation-attached)');
+      var $forms = $('.js-validate-form:not(.is-validation-attached)');
       if ($forms.length === 0) return;
       // CONSTRUCTOR LIKE FIRST
       $forms.each(function(i, form) {
@@ -141,29 +131,6 @@
 
         $form.addClass('is-validation-attached');
       });
-    },
-    validateFormsCustom: function() {
-      var _this = this;
-      var requestValidationObject = {
-        errorPlacement: _this.data.validateErrorPlacement,
-        highlight: _this.data.validateHighlight,
-        unhighlight: _this.data.validateUnhighlight,
-        submitHandler: _this.data.validateSubmitHandler,
-        rules: {
-          phone: _this.data.masks.phone,
-        },
-        messages: {
-          phone: {
-            required: 'Заполните это поле',
-            minlength: 'Введите корректный телефон',
-          },
-        },
-      };
-
-      // call/init
-      $('[js-validate-request]').validate(requestValidationObject);
-      // $("[js-subscription-validation-footer]").validate(subscriptionValidationObject);
-      // $("[js-subscription-validation-menu]").validate(subscriptionValidationObject);
     },
   };
 })(jQuery, window.APP);

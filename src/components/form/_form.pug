@@ -1,4 +1,97 @@
 // form
-.form
+form(action="#").form.js-validate-form
   .container
     .form__wrapper
+      h2.h2-title.form__title Заказ SIM-карты
+
+      // section
+      .form__section
+        h3.h3-title.form__section-title Выберите нужный тариф:
+        select(placeholder="Выберите из списка").js-select
+          option(disabled) Выберите из списка
+          option Тариф 1
+          option Тариф 2
+          option Тариф 3
+
+      // section
+      .form__section
+        h3.h3-title.form__section-title Выберите способ подключения:
+        .form__radio-select.form__radio-select--two
+          .form__radio
+            input(type="radio" name="type" id="type_1" checked)
+            label(for="type_1")
+              .form__radio-text Заказать новый номер
+              .form__radio-desc Сим-карта с новым номером оформляется бесплатно
+              .form__radio-hidden Сохранить старый номер можно от любого оператора связи, кроме Tele2
+
+          .form__radio
+            input(type="radio" name="type" id="type_2")
+            label(for="type_2")
+              .form__radio-text Сохранить старый номер
+              .form__radio-desc Услуга предоставляется на платной основе.
+              .form__radio-hidden Сохранить старый номер можно от любого оператора связи, кроме Tele2
+
+      // section
+      .form__section
+        h3.h3-title.form__section-title Выберите способ доставки SIM карты:
+        .form__radio-select.form__radio-select--three
+          .form__radio
+            input(type="radio" name="delivery" id="delivery_1" checked)
+            label(for="delivery_1")
+              .form__radio-text Самовывоз из любого офиса Теле2
+              .form__radio-hidden Самовывоз из офиса Tele2 бесплатный
+          .form__radio
+            input(type="radio" name="delivery" id="delivery_2")
+            label(for="delivery_2")
+              .form__radio-text Доставка курьером
+              .form__radio-hidden Самовывоз из офиса Tele2 бесплатный
+          .form__radio
+            input(type="radio" name="delivery" id="delivery_3")
+            label(for="delivery_3")
+              .form__radio-text Доставка Почтой России
+              .form__radio-hidden Самовывоз из офиса Tele2 бесплатный
+
+      // section
+      .form__section
+        h3.h3-title.form__section-title Контактная информация:
+        .ui-group
+          .ui-input.js-input-focus
+            span.ui-input__label Укажите ФИО
+            input.ui-input__input(type="text" name="firstname" required)
+        .ui-group
+          .ui-input.js-input-focus
+            span.ui-input__label Укажите контактный номер
+            input.ui-input__input(type="tel" name="phone" required)
+        .ui-group
+          .ui-input.js-input-focus
+            span.ui-input__label Контактный email
+            input.ui-input__input(type="text" name="email" required)
+
+      // section
+      .form__section
+        h3.h3-title.form__section-title Прикрепите изображения вашего паспорта (не обязательно):
+        .ui-file
+          input(type="file" name="file" id="file")
+          label(for="file") Прикрепить файл
+
+      // section
+      .form__section
+        h3.h3-title.form__section-title Комментарий к заказу (не обязательно):
+        .ui-group
+          .ui-input.js-input-focus
+            span.ui-input__label Добавьте комментарий к заявке
+            textarea.ui-input__input(type="text" name="comment" rows="3" data-min-rows="3")
+
+      // section
+      .form__section
+        .form__checkbox
+          .ui-checkbox
+            input(type="agree" name="agree" id="agree")
+            label(for="agree")
+              span
+                a(href="#") Согласие на обработку данных
+
+        .form__cta
+          button(type="submit").btn.btn-primary Заказать SIM-карту
+
+    .form__terms Заполняя данную форму, я даю согласие ООО «Мобилюкс» на обработку предоставленных мною данных в целях подключения к услугам связи Tele2 и дальнейшего рекламного информирования. Услуги связи предоставляются ООО «Т2 Мобайл», Лицензии Роскомнадзора № 133 483, № 133 543, выданные 16 июня 2015 г., № 13 929, выданная 21 июля 2015 г.
