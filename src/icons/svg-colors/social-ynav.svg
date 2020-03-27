@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>social-ynav</title>
+    <desc>Created with Sketch.</desc>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D_Start" transform="translate(-329.000000, -1032.000000)">
+            <g id="cards" transform="translate(70.000000, 560.000000)">
+                <g id="1" transform="translate(0.000000, 82.000000)">
+                    <g id="icons_card" transform="translate(105.000000, 388.000000)">
+                        <g id="8" transform="translate(152.000000, 0.000000)">
+                            <g id="social-ynav" transform="translate(2.000000, 1.995134)">
+                                <ellipse id="Oval" fill="#FFD83E" cx="14" cy="13.9659367" rx="14" ry="13.9659367"></ellipse>
+                                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="19 9 14.5833074 20 12.3014528 15.6993884 8 13.470307"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

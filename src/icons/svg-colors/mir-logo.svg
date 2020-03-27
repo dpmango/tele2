@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="14px" viewBox="0 0 49 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>mir-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-0.18041958%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#00B4E6" offset="0%"></stop>
+            <stop stop-color="#088CCB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D_Start" transform="translate(-676.000000, -2957.000000)">
+            <g id="footer" transform="translate(70.000000, 2950.000000)">
+                <g id="payments" transform="translate(491.000000, 4.000000)">
+                    <g id="mir-logo" transform="translate(115.000000, 3.000000)">
+                        <path d="M43.5,0 L34.2,0 C34.7,3.1 37.7,6 41,6 L48.4,6 C48.5,5.7 48.5,5.3 48.5,5 C48.5,2.2 46.3,0 43.5,0 Z" id="path10" fill="url(#linearGradient-1)"></path>
+                        <path d="M35,6.5 L35,14 L39.5,14 L39.5,10 L43.5,10 C45.7,10 47.6,8.5 48.2,6.5 L35,6.5 Z" id="path12" fill="#4DB45F"></path>
+                        <path d="M19,0 L19,14 L23,14 C23,14 24,14 24.5,13 C27.2,7.6 28,6 28,6 L28.5,6 L28.5,14 L33,14 L33,0 L29,0 C29,0 28,0.1 27.5,1 C25.2,5.6 24,8 24,8 L23.5,8 L23.5,0 L19,0 Z" id="path14" fill="#4DB45F"></path>
+                        <path d="M0,14 L0,0 L4.5,0 C4.5,0 5.8,0 6.5,2 C8.3,7.3 8.5,8 8.5,8 C8.5,8 8.9,6.7 10.5,2 C11.2,0 12.5,0 12.5,0 L17,0 L17,14 L12.5,14 L12.5,6.5 L12,6.5 L9.5,14 L7.5,14 L5,6.5 L4.5,6.5 L4.5,14 L0,14 Z" id="path16" fill="#4DB45F"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

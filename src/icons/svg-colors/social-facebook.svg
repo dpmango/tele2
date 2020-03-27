@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>social-facebook</title>
+    <desc>Created with Sketch.</desc>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D_Start" transform="translate(-227.000000, -1032.000000)">
+            <g id="cards" transform="translate(70.000000, 560.000000)">
+                <g id="1" transform="translate(0.000000, 82.000000)">
+                    <g id="icons_card" transform="translate(105.000000, 388.000000)">
+                        <g id="4" transform="translate(50.000000, 0.000000)">
+                            <g id="Icons/Social/Facebook/Active" transform="translate(2.000000, 1.995134)">
+                                <g id="social-facebook">
+                                    <ellipse id="Oval" fill="#3B5998" cx="14" cy="13.9659367" rx="14" ry="13.9659367"></ellipse>
+                                    <path d="M17.0948707,9.6745234 L15.940729,9.67503435 C15.0356839,9.67503435 14.8606846,10.1040594 14.8606846,10.7335459 L14.8606846,12.1216183 L17.0188954,12.1216183 L17.0178711,14.2956972 L14.8608553,14.2956972 L14.8608553,19.8748963 L12.6097667,19.8748963 L12.6097667,14.2956972 L10.7279693,14.2956972 L10.7279693,12.1216183 L12.6097667,12.1216183 L12.6097667,10.518267 C12.6097667,8.65756883 13.7493963,7.64419088 15.4131701,7.64419088 L17.0950415,7.64674562 L17.0950415,9.6745234 L17.0948707,9.6745234 Z" id="facebook-icon" fill="#FEFEFE" fill-rule="nonzero"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
