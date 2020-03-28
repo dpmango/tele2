@@ -7,7 +7,16 @@ header.header
       a(href="#" target="_blank").header__logo-sjr
         i.icon.icon-sjr-logo
 
-      .header__region Ваш регион <span>Москва и Московская область</span>
+      .header__region
+        .header__region-text Ваш регион <a href="#REGION" class="js-popup">Москва и Московская область</a>
+        .header__region-modal.region-modal.js-region-modal
+          .h3-title.region-modal__title Ваш регион Москва?
+          .region-modal__close.js-close-region-modal
+            +svgMono('close')
+          .region-modal__cta
+            a(href="#").btn.btn-outline.btn--huge.btn--fill.js-close-region-modal Да
+            a(href="#REGION").btn.btn-outline.btn--huge.js-popup Нет
+
 
       a(href="#").header__phone
         +svgMono('phone')

@@ -1,0 +1,244 @@
+
+-
+  var list = {
+    main: [
+      "Москва и Московская область",
+      "Санкт-Петербург и Ленинградская область",
+      "Челябинская область",
+      "Ростовская область",
+      "Иркутская область",
+      "Свердловская область",
+      "Нижегородская область",
+    ],
+    a: [
+      "Алтайский край",
+      "Архангельская область",
+    ],
+    b: [
+      "Белгородская область",
+      "Брянская область",
+    ],
+    c: [
+      "Владимирская область",
+      "Волгоградская область",
+      "Вологодская область",
+      "Воронежская область",
+    ],
+    e: [
+      "Еврейская АО",
+    ],
+    i: [
+      "Ивановская область",
+      "Иркутская область",
+    ],
+    k: [
+      "Калининградская область",
+      "Калужская область",
+      "Камчатский край",
+      "Кемеровская область",
+      "Кировская область",
+      "Костромская область",
+      "Краснодарский край и Республика Адыгея",
+      "Красноярский край (кроме Норильска)",
+      "Красноярский край (Норильск)",
+      "Курганская область",
+      "Курская область",
+    ],
+    l: [
+      "Липецкая область",
+    ],
+    m: [
+      "Магаданская область",
+      "Москва и Московская область",
+      "Мурманская область",
+    ],
+    n: [
+      "Нижегородская область",
+      "Новгородская область",
+      "Новосибирская область",
+    ],
+    o: [
+      "Омская область",
+      "Оренбургская область",
+      "Орловская область",
+    ],
+    p: [
+      "Пензенская область",
+      "Пермский край",
+      "Приморский край",
+      "Псковская область",
+    ],
+    r: [
+      "Республика Бурятия",
+      "Республика Карелия",
+      "Республика Коми",
+      "Республика Марий Эл",
+      "Республика Мордовия",
+      "Республика Татарстан",
+      "Республика Хакасия и Республика Тыва",
+      "Ростовская область",
+      "Рязанская область",
+    ],
+    s: [
+      "Самарская область",
+      "Санкт-Петербург и Ленинградская область",
+      "Саратовская область",
+      "Сахалинская область",
+      "Свердловская область",
+      "Смоленская область",
+    ],
+    t: [
+      "Тамбовская область",
+      "Тверская область",
+      "Томская область",
+      "Тульская область",
+      "Тюменская область",
+    ],
+    y: [
+      "Удмуртская Республика",
+      "Ульяновская область",
+    ],
+    x: [
+      "Ханты-Мансийский АО—Югра",
+    ],
+    ce: [
+      "Челябинская область",
+      "Чувашская Республика",
+    ],
+    ya: [
+      "Ямало-Ненецкий АО",
+      "Ярославская область",
+    ]
+  }
+
+#REGION.mfp-hide.popup-dialog
+  .popup
+    .popup__title.h3-title Выбранный регион: Москва и область
+    .ui-group
+      .ui-input.js-input-focus
+        span.ui-input__label Начните ввод региона
+        input.ui-input__input(type="text" name="region")
+
+    .popup__regions
+      // col
+      .popup__regions-col
+        .popup__region
+          ul.popup__region-list
+            each r in list.main
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name А
+          ul.popup__region-list
+            each r in list.a
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name Б
+          ul.popup__region-list
+            each r in list.b
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name В
+          ul.popup__region-list
+            each r in list.c
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name Е
+          ul.popup__region-list
+            each r in list.e
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name И
+          ul.popup__region-list
+            each r in list.i
+              li
+                a(href="#")= r
+      // col
+      .popup__regions-col
+        .popup__region
+          .popup__region-name К
+          ul.popup__region-list
+            each r in list.k
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name Л
+          ul.popup__region-list
+            each r in list.l
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name М
+          ul.popup__region-list
+            each r in list.m
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name Н
+          ul.popup__region-list
+            each r in list.n
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name О
+          ul.popup__region-list
+            each r in list.o
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name П
+          ul.popup__region-list
+            each r in list.p
+              li
+                a(href="#")= r
+      // col
+      .popup__regions-col
+        .popup__region
+          .popup__region-name Р
+          ul.popup__region-list
+            each r in list.r
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name С
+          ul.popup__region-list
+            each r in list.s
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name Т
+          ul.popup__region-list
+            each r in list.t
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name У
+          ul.popup__region-list
+            each r in list.y
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name X
+          ul.popup__region-list
+            each r in list.x
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name Ч
+          ul.popup__region-list
+            each r in list.ce
+              li
+                a(href="#")= r
+        .popup__region
+          .popup__region-name Я
+          ul.popup__region-list
+            each r in list.ya
+              li
+                a(href="#")= r
+
+    .popup__cta
+      a(href="#").btn.btn-outline.btn--huge.js-close-popup Закрыть

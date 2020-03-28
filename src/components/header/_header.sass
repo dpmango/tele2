@@ -16,14 +16,22 @@
       font-size: 33px
 
   &__region
-    font-family: $serif
-    font-size: 18px
+    position: relative
     margin-left: auto
     margin-right: auto
     margin-bottom: 3px
-    span
+  &__region-text
+    font-family: $serif
+    font-size: 18px
+    a
+      display: inline-block
       text-decoration: underline
-
+  &__region-modal
+    min-width: 458px
+    position: absolute
+    z-index: 7
+    left: 0
+    top: 40px
   &__phone
     display: flex
     align-items: center
@@ -35,3 +43,37 @@
       margin-left: 15px
       font-family: $serif
       font-size: 18px
+
+.region-modal
+  background: white
+  border: 2px solid $fontColor
+  padding: 35px
+  opacity: 0
+  pointer-events: none
+  transform: translate(0,7px)
+  transition: .25s $ease
+  &.is-visible
+    transform: none
+    opacity: 1
+    pointer-events: all
+  &__wrapper
+    position: relative
+  &__title
+    padding-right: 40px
+  &__close
+    position: absolute
+    top: 30px
+    right: 25px
+    padding: 10px
+    font-size: 0
+    cursor: pointer
+    transition: .25s $ease
+    .ico
+      font-size: 24px
+    &:hover
+      color: $colorPrimary
+  &__cta
+    margin-top: 20px
+    display: flex
+    .btn
+      margin-right: 20px

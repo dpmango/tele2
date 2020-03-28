@@ -4,8 +4,15 @@
 (function($, APP) {
   APP.Plugins.Modals = {
     init: function() {
+      this.clickListeners();
+    },
+    openModal: function(target) {
       var startWindowScroll = 0;
-      $('.js-popup').magnificPopup({
+
+      $.magnificPopup.open({
+        items: {
+          src: target,
+        },
         type: 'inline',
         fixedContentPos: true,
         fixedBgPos: true,
@@ -31,6 +38,20 @@
           },
         },
       });
+    },
+    clickListeners: function() {
+      _document
+        .on('click', '.js-popup', function(e) {
+          e.preventDefault();
+
+          var $link = $(this);
+          var target = $link.attr('href');
+
+          APP.Plugins.Modals.openModal(target);
+        })
+        .on('click', '.js-close-popup', function() {
+          $.magnificPopup.close();
+        });
     },
   };
 })(jQuery, window.APP);

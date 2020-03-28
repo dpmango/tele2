@@ -10,7 +10,12 @@
       },
     },
     init: function(fromPjax) {
+      var _this = this;
       if (!fromPjax) {
+        setTimeout(function() {
+          _this.showRegionModal();
+        }, 3000);
+
         this.getHeaderParams();
         this.hamburgerClickListener();
       }
@@ -29,9 +34,16 @@
       $('[js-hamburger]').removeClass('is-active');
     },
     hamburgerClickListener: function() {
-      _document.on('click', '[js-hamburger]', function() {
-        $(this).toggleClass('is-active');
-      });
+      _document
+        .on('click', '[js-hamburger]', function() {
+          $(this).toggleClass('is-active');
+        })
+        .on('click', '.js-close-region-modal', function() {
+          $('.js-region-modal').removeClass('is-visible');
+        });
+    },
+    showRegionModal: function() {
+      $('.js-region-modal').addClass('is-visible');
     },
     // listenScroll: function() {
     //   _window.on('scroll', this.scrollHeader.bind(this));

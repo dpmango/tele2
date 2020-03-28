@@ -1,5 +1,5 @@
 // form
-form(action="#").form.js-validate-form
+form(action="#" data-success-function="formValid").form.js-validate-form
   .container
     .form__wrapper
       h2.h2-title.form__title Заказ SIM-карты
@@ -95,3 +95,9 @@ form(action="#").form.js-validate-form
           button(type="submit").btn.btn-primary Заказать SIM-карту
 
     .form__terms Заполняя данную форму, я даю согласие ООО «Мобилюкс» на обработку предоставленных мною данных в целях подключения к услугам связи Tele2 и дальнейшего рекламного информирования. Услуги связи предоставляются ООО «Т2 Мобайл», Лицензии Роскомнадзора № 133 483, № 133 543, выданные 16 июня 2015 г., № 13 929, выданная 21 июля 2015 г.
+
+script.
+  function formValid(formData){
+    console.log(formData);
+    APP.Plugins.Modals.openModal("#THANKS");
+  }
