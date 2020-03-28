@@ -15,11 +15,11 @@
     flex: 0 0 $col4
     max-width: $col4
 
-
 // tarif card
 .tarif-card
   border: 1px solid #D1DBD6
   padding: 30px 20px
+  transition: .25s $ease
   &__name
     font-size: 20px
   &__price
@@ -90,8 +90,6 @@
         z-index: 2
       &:nth-child(10)
         z-index: 1
-
-
   &__cta
     margin-top: 30px
     display: flex
@@ -107,3 +105,5 @@
       transition: .25s $ease
       &:hover
         opacity: .6
+  &:hover
+    box-shadow: 0 1px 12px 0 rgba(0,0,0,0.35)

@@ -1,0 +1,33 @@
+
+// accardeon
+.accardeon
+  &__element
+    &.is-active
+      .accardeon__toggler
+        &::after
+          transform: translateY(-50%) rotate(180deg)
+  &__toggler
+    position: relative
+    cursor: pointer
+    padding: 12px 0
+
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      right: 0px
+      top: 50%
+      transform: translateY(-50%)
+      background: svg-load('../icons/svg-mono/caret.svg') no-repeat center
+      background-size: contain
+      size: 20px
+      transition: transform .25s $ease
+      will-change: transform
+      transform-style: preserve-3d
+      backface-visibility: hidden
+
+  &__title
+    font-size: 24px
+
+  &__content
+    display: none

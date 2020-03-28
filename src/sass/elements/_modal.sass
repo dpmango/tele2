@@ -10,13 +10,34 @@ html.mfp-helper
     height: 100%
     -webkit-transform: translateZ(0)
 
-#small-dialog
-  background: white
-  padding: 20px 30px
+.mfp-container
+  padding-left: 0
+  padding-right: 0
+
+.popup-dialog
+  background: transparent
   text-align: left
-  max-width: 600px
+  max-width: 1220px
+  padding-left: 40px
+  padding-right: 40px
   margin: 40px auto
   position: relative
+  .mfp-close
+    top: 30px
+    right: 65px
+    font-size: 0px
+    size: auto
+    line-height: 0
+    padding: 10px
+    color: $fontColor
+    opacity: 1
+    transition: .25s $ease
+    .ico
+      font-size: 24px
+    &:hover
+      color: $colorPrimary
+    &:active, &:focus
+      top: 30px
 
 
 // Fade-zoom animation for first dialog
@@ -25,40 +46,37 @@ html.mfp-helper
   .popup-dialog
     opacity: 0
     transition: all 0.2s ease-in-out
-    transform: scale(0.8)
+    // transform: scale(0.8)
+    transform: translate(0, 75px)
   &.mfp-ready .popup-dialog
     opacity: 1
-    transform: scale(1)
+    transform: none
   &.mfp-removing .popup-dialog
-    transform: scale(0.8)
+    // transform: scale(0.8)
+    transform: translate(0, -75px)
     opacity: 0
   &.mfp-bg
-    background: $colorGreen
+    background: white
     opacity: 0
     transition: opacity 0.3s $ease
   &.mfp-ready.mfp-bg
-    opacity: 1
+    opacity: .7
   &.mfp-removing.mfp-bg
     opacity: 0
 
 
 
-// Fade-move animation
-.my-mfp-slide-bottom
-  .zoom-anim-dialog
-    opacity: 0
-    transition: all 0.2s ease-out
-    transform: translateY(-20px) perspective(600px) rotateX(10deg)
-  &.mfp-ready .zoom-anim-dialog
-    opacity: 1
-    transform: translateY(0) perspective(600px) rotateX(0)
-  &.mfp-removing .zoom-anim-dialog
-    opacity: 0
-    transform: translateY(-10px) perspective(600px) rotateX(10deg)
-  &.mfp-bg
-    opacity: 0
-    transition: opacity 0.3s ease-out
-  &.mfp-ready.mfp-bg
-    opacity: 0.8
-  &.mfp-removing.mfp-bg
-    opacity: 0
+// contents
+.popup-tarif
+  position: relative
+  padding: 35px
+  background: white
+  border: 2px solid $fontColor
+  &__title
+    font-family: $serif
+    margin-bottom: 25px
+  &__cta
+    margin-top: 35px
+    margin-bottom: 20px
+  .table
+    margin: 0px 0 10px

@@ -12,7 +12,7 @@
         disableOnMobile: false,
         nativeOnMobile: true,
         arrowButtonMarkup:
-          '<b class="button"><svg class="ico ico-select-down"><use xlink:href="img/sprite.svg#ico-select-down"></use></svg></b>',
+          '<div class="button"><svg class="ico ico-mono-caret"><use xlink:href="img/sprite-mono.svg#ico-mono-caret"></use></svg></div>',
 
         onInit: function(element, data) {
           var $elm = $(element),

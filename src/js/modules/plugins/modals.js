@@ -15,6 +15,11 @@
         midClick: true,
         removalDelay: 300,
         mainClass: 'popup-buble',
+        closeMarkup: `<button title="%title%" type="button" class="mfp-close">
+          <svg class="ico ico-mono-close">
+            <use xlink:href="img/sprite-mono.svg#ico-mono-close"></use>
+          </svg>
+        </button>`,
         callbacks: {
           beforeOpen: function() {
             startWindowScroll = _window.scrollTop();
