@@ -41,6 +41,6 @@ mixin tarifCard(card)
 
     .tarif-card__cta
       .tarif-card__cta-button
-        a(href='#').btn.btn-outline Выбрать тариф
+        a(href='#' data-id=card.id).btn.btn-outline.js-select-tarif Выбрать тариф
       .tarif-card__cta-link
         a(href="#TARIF").js-popup Подробнее
