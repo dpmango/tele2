@@ -38,7 +38,7 @@
           }
         })
 
-        // accardeon
+        // tarif select
         .on('click', '.js-select-tarif', function(e) {
           // select by id in selectric
           var id = $(this).data('id');
@@ -51,6 +51,19 @@
 
           $('body, html').animate({ scrollTop: topTarget }, 1000);
           return false;
+        })
+        .on('click', '.js-regions a', function() {
+          var $link = $(this);
+          var text = $link.text();
+
+          // paste text to header location
+          $('.header__region-text a').text(text);
+          $('#REGION .popup__title span').text(text);
+          $.magnificPopup.close();
+          APP.Components.Header.hideRegionModal();
+
+          // trigger cookie updates or refresh page
+          console.log('REGION CHANGE TRIGGERED');
         });
     },
   };

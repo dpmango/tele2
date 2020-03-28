@@ -13,7 +13,6 @@ window.onbeforeunload = function() {
 // shorthand operators
 var _window = $(window);
 var _document = $(document);
-var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
 
 (function($, APP) {
   APP.Initilizer = function() {
@@ -37,12 +36,12 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
 
     // Plugins which depends on DOM and page content
     app.initPlugins = function() {
-      APP.Plugins.Teleport.init();
       APP.Plugins.Sliders.init();
       APP.Plugins.Modals.init();
       APP.Plugins.Masks.init();
       APP.Plugins.Selectric.init();
       APP.Plugins.InputFocuses.init();
+      APP.Plugins.FilterList.init();
       APP.Plugins.TextareaAutoExpand.init();
       APP.Plugins.Validations.init();
       APP.Plugins.LegacySupport.fixImages();

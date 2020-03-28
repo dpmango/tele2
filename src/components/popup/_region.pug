@@ -113,13 +113,13 @@
 
 #REGION.mfp-hide.popup-dialog
   .popup
-    .popup__title.h3-title Выбранный регион: <br/>Москва и область
+    .popup__title.h3-title Выбранный регион: <br/><span>Москва и область</span>
     .ui-group
       .ui-input.js-input-focus
         span.ui-input__label Начните ввод региона
-        input.ui-input__input(type="text" name="region")
+        input.ui-input__input.js-filter-list(type="text" name="region" data-list=".js-regions")
 
-    .popup__regions
+    .popup__regions.js-regions
       // col
       .popup__regions-col
         .popup__region

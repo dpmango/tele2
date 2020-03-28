@@ -45,6 +45,9 @@
     showRegionModal: function() {
       $('.js-region-modal').addClass('is-visible');
     },
+    hideRegionModal: function() {
+      $('.js-region-modal').removeClass('is-visible');
+    },
     // listenScroll: function() {
     //   _window.on('scroll', this.scrollHeader.bind(this));
     // },

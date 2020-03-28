@@ -29,8 +29,18 @@
         </button>`,
         callbacks: {
           beforeOpen: function() {
+            APP.Components.Header.hideRegionModal();
             startWindowScroll = _window.scrollTop();
             // $('html').addClass('mfp-helper');
+          },
+          open: function() {
+            var $input = this.content.find('input');
+            if ($input.length > 0) {
+              $input.first().focus();
+              setTimeout(function() {
+                $input.first().focus();
+              }, 1000);
+            }
           },
           close: function() {
             // $('html').removeClass('mfp-helper');
