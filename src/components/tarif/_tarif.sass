@@ -5,8 +5,9 @@
     margin: 0
   &__grid
     display: flex
-    flex-wrap: wrap
     margin: 25px -15px -15px
+    .swiper-pagination
+      display: none
   &__col
     width: 100%
     min-width: 1px
@@ -15,8 +16,30 @@
     flex: 0 0 $col4
     max-width: $col4
 
++r($lg)
+  .tarif
+    margin-top: 30px
+    &__grid
+      margin-top: 15px
+      margin-left: -25px
+      margin-right: -25px
+      padding-left: 25px
+      padding-right: 25px
+      padding-bottom: 60px
+      .swiper-pagination
+        display: flex
+        bottom: 40px
+      .swiper-slide
+        &.swiper-slide-active, &.swiper-slide-duplicate-active
+          .tarif-card::after
+            opacity: 0
+    &__col
+      flex-basis: 625px
+      max-width: 625px
+
 // tarif card
 .tarif-card
+  position: relative
   border: 1px solid #D1DBD6
   padding: 30px 20px
   transition: .25s $ease
@@ -107,3 +130,29 @@
         opacity: .6
   &:hover
     box-shadow: 0 1px 12px 0 rgba(0,0,0,0.35)
+
++r($lg)
+  .tarif-card
+    padding-left: 60px
+    padding-right: 60px
+    padding-bottom: 45px
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute 0
+      z-index: 2
+      background: rgba(white, .75)
+      transition: .25s $ease
+      will-change: opacity
+      backface-visibility: hidden
+      transform: translate3d(0,0,0)
+      transform-style: preserve-3d
+      opacity: 1
+      pointer-events: none
+    &__benefits
+      display: flex
+      flex-wrap: wrap
+      span
+        margin-right: 50px
+        &:last-child
+          margin-right: 0

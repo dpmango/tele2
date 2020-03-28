@@ -5,10 +5,13 @@ include _tarif-card
   .container
     h2.h2-title.tarif__title Связь для журналистов
 
-    .tarif__grid
-      .tarif__col
-        +tarifCard({name: 'Компаньон S', price: '250'})
-      .tarif__col
-        +tarifCard({name: 'Компаньон M', price: '400'})
-      .tarif__col
-        +tarifCard({name: 'Компаньон L', price: '600'})
+    .tarif__grid.swiper-container.swiper-bullets-circle.js-tarif-swiper
+      .swiper-wrapper
+        .swiper-slide.tarif__col
+          +tarifCard({name: 'Компаньон S', price: '250'})
+        .swiper-slide.tarif__col
+          +tarifCard({name: 'Компаньон M', price: '400'})
+        .swiper-slide.tarif__col
+          +tarifCard({name: 'Компаньон L', price: '600'})
+
+      .swiper-pagination

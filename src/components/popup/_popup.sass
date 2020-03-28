@@ -20,7 +20,7 @@
     flex-wrap: wrap
   &__regions-col
     padding: 15px
-    with: 100%
+    width: 100%
     min-width: 1px
     min-height: 0
     flex: 0 0 $col4
@@ -46,4 +46,24 @@
       text-decoration: underline
       &:hover
         text-decoration: none
+      // &::after
+      //   display: block
+      //   content: ' '
+      //   position: absolute
+      //   left: 0
+      //   bottom: -1px
+      //   right: 0
+      //   height: 1px
+      //   background: $fontColor
+      //   transition: .25s $ease
+      // &:hover
+      //   &::after
+      //     right: 100%
 
++r($lg)
+  .popup
+    &__region-name
+      font-size: 20px
+    &__region-list
+      li
+        font-size: 14px

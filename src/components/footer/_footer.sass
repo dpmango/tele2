@@ -1,7 +1,7 @@
 // FOOTER
 .footer
   background: white
-  padding: 35px
+  padding: 35px 0
   &__wrapper
     display: flex
     align-items: center
@@ -49,3 +49,21 @@
       &:hover
         opacity: 0.75
 
+
++r($lg)
+  .footer
+    &__wrapper
+      flex-wrap: wrap
+    &__copy
+      flex: 0 1 auto
+      order: 1
+    &__socials
+      flex: 0 0 auto
+      order: 2
+      margin-left: auto
+    &__payments
+      order: 3
+      flex: 1 1 100%
+      margin-top: 5px
+      margin-left: 0
+      margin-right: 0

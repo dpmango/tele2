@@ -76,6 +76,7 @@
       text-align: center
       // background: #E8E8ED
       padding: 15px
+      transition: margin .25s $ease
       &::before
         display: inline-block
         content: ' '
@@ -102,7 +103,7 @@
   &__radio-hidden
     position: absolute
     z-index: 2
-    bottom: -35px
+    top: calc(100% + 20px)
     left: 0
     right: 0
     text-align: left
@@ -122,3 +123,42 @@
     font-size: 16px
     line-height: 1.375
     color: #83949E
+
++r($lg)
+  .form
+    &__wrapper
+      padding: 30px
+    &__section
+      padding: 15px 0 30px
+      &::after
+        left: -30px
+        right: -30px
+    &__radio-select
+      display: block
+      margin-top: 25px
+      padding-bottom: 0
+      &--two
+        .form__radio
+          flex-basis: 100%
+          max-width: 100%
+      &--three
+        .form__radio
+          flex-basis: 100%
+          max-width: 100%
+    &__radio
+      input
+        &:checked
+          + label
+            margin-bottom: 40px
+            &::before
+              top: 0px
+              bottom: 0px
+      label
+        min-height: 80px
+        margin-bottom: 2px
+        text-align: left
+        padding: 25px 25px
+    &__radio-hidden
+      top: calc(100% + 7px)
+    &__checkbox
+      margin-top: 20px

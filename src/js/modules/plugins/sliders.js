@@ -61,11 +61,9 @@
           watchOverflow: true,
           setWrapperSize: false,
           spaceBetween: 0,
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           normalizeSlideIndex: true,
-          autoplay: {
-            delay: 5000,
-          },
+          centeredSlides: true,
           pagination: {
             el: '.swiper-pagination',
             type: 'bullets',

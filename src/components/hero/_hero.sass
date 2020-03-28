@@ -4,14 +4,16 @@
   &__background
     position: relative
     z-index: 1
-    height: 430px
+    min-height: 430px
+    // height: 430px
     display: flex
     flex-direction: column
     img
+      flex: 1 1 auto
       height: 100%
       width: 100%
       object-fit: cover
-
+      // object-position: center top
   &__content
     position: absolute
     left: 0
@@ -19,7 +21,19 @@
     z-index: 2
     top: 50%
     transform: translateY(-50%)
-
   &__title
     margin: 1em 0 .5em
 
++r($lg)
+  .hero
+    &__background
+      min-height: 260px
+    &__title
+      margin-top: 0
+      margin-bottom: 0.3em
+      max-width: 470px
+      br
+        display: none
+    &__content
+      .p-main
+        max-width: 450px
