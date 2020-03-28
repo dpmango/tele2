@@ -44,6 +44,8 @@
     z-index: 7
     left: 0
     top: 40px
+  &__region-icon
+    display: none
   &__phone
     display: flex
     align-items: center
@@ -73,9 +75,57 @@
     &__phone
       padding: 10px
       margin-right: -10px
+      .ico
+        font-size: 22px
       span
         display: none
 
++r($md)
+  .header
+    padding: 13px 0
+    &__logo
+      order: 1
+      margin-right: 25px
+      .ico
+        font-size: 20px
+    &__logo-sjr
+      order: 2
+      width: 90px
+      height: 34px
+      .icon
+        transform: scale(0.6)
+        transform-origin: left top
+    &__region
+      order: 4
+      position: static
+      margin-right: -10px
+      margin-left: 10px
+      margin-bottom: 0
+    &__region-icon
+      display: block
+      padding: 10px
+      font-size: 0
+      transition: color .25s $ease
+      .ico
+        font-size: 24px
+      &:hover
+        color: $colorPrimary
+    &__region-text
+      display: none
+    &__region-modal
+      top: 55px
+      left: 25px
+      right: 25px
+      min-width: 1px
+    &__phone
+      order: 3
+      margin-right: 0
+
++r($sm)
+  .header
+    &__region-modal
+      left: 15px
+      right: 15px
 
 
 // region modal
@@ -120,3 +170,9 @@
       right: 5px
       .ico
         font-size: 17px
+
++r($sm)
+  .region-modal
+    padding-left: 15px
+    padding-right: 15px
+    padding-bottom: 30px

@@ -162,3 +162,28 @@
       top: calc(100% + 7px)
     &__checkbox
       margin-top: 20px
+
++r($sm)
+  .form
+    &__wrapper
+      padding: 30px 10px 10px 20px
+    &__section
+      &::after
+        left: -20px
+        right: -10px
+    &__section-title
+      margin-bottom: 15px
+    &__radio-select
+      margin-top: 10px
+    &__radio
+      input
+        &:checked
+          + label
+            margin-bottom: 55px
+      label
+        padding: 15px
+    &__radio-desc
+      margin-top: 10px
+
+    &__checkbox
+      margin-top: 10px

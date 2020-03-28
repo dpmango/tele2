@@ -8,6 +8,9 @@
   &__title
     font-family: $serif
     margin-bottom: 25px
+    padding-right: 40px
+    br
+      display: none
   &__cta
     margin-top: 35px
     margin-bottom: 20px
@@ -67,3 +70,27 @@
     &__region-list
       li
         font-size: 14px
+
++r($md)
+  .popup
+    &__regions
+      margin: -5px 0 -5px
+    &__regions-col
+      flex-basis: 100%
+      max-width: 100%
+      padding: 0
+    &__region
+      &:last-child
+        margin-bottom: 0
+    &__cta
+      margin-bottom: 5px
+
++r($sm)
+  .popup
+    padding: 35px 15px
+    &__title
+      padding-right: 0
+      br
+        display: block
+    &__region
+      margin: 20px 0

@@ -8,6 +8,8 @@ header.header
         i.icon.icon-sjr-logo
 
       .header__region
+        a(href="#REGION").header__region-icon.js-popup
+          +svgMono('location')
         .header__region-text Ваш регион <a href="#REGION" class="js-popup">Москва и Московская область</a>
         .header__region-modal.region-modal.js-region-modal
           .h3-title.region-modal__title Ваш регион Москва?
@@ -21,6 +23,7 @@ header.header
       a(href="#").header__phone
         +svgMono('phone')
         span 8 800 550 00 50
+
       //- .header__hamburger
       //-   .hamburger.hamburger--squeeze(js-hamburger)
       //-     .hamburger-box

@@ -36,6 +36,27 @@
     &__col
       flex-basis: 625px
       max-width: 625px
+      padding-left: 5px
+      padding-right: 5px
+
++r($md)
+  .tarif
+    margin-top: 30px
+    &__col
+      flex-basis: 90%
+      max-width: 90%
+
++r($sm)
+  .tarif
+    margin-top: 20px
+    &__grid
+      margin: 15px -15px -15px
+      .swiper-pagination
+        bottom: 30px
+    &__col
+      padding: 5px
+      flex-basis: 100%
+      max-width: 100%
 
 // tarif card
 .tarif-card
@@ -117,6 +138,7 @@
     margin-top: 30px
     display: flex
     align-items: center
+    flex-wrap: wrap
   &__cta-button
     flex: 0 0 auto
   &__cta-link
@@ -156,3 +178,24 @@
         margin-right: 50px
         &:last-child
           margin-right: 0
+
++r($md)
+  .tarif-card
+    padding-left: 40px
+    padding-right: 40px
+
++r($sm)
+  .tarif-card
+    padding: 30px 15px 10px
+    &__benefits
+      display: block
+    &__list
+      .ul-list
+        margin-bottom: 0
+    &__icons
+      margin-top: 5px
+    &__icons-list
+      flex: 1 1 100%
+    &__cta
+      display: block
+      text-align: center
