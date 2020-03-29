@@ -93,10 +93,10 @@ form(action="#" data-success-function="formValid").form.js-validate-form
       .form__section
         .form__checkbox
           .ui-checkbox
-            input(type="agree" name="agree" id="agree")
+            input(type="checkbox" name="agree" id="agree" checked)
             label(for="agree")
               span
-                a(href="#") Согласие на обработку данных
+                a(href="#TERMS").js-popup Согласие на обработку данных
 
         .form__cta
           button(type="submit").btn.btn-primary Заказать SIM-карту

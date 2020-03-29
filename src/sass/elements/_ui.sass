@@ -81,7 +81,8 @@
     &:checked
       + label
         &::before
-          border-color: $colorGreen
+          background: $fontColor
+          border-color: $fontColor
         &::after
           transform: translateY(-50%) scale(1)
   label
@@ -124,8 +125,9 @@
       cursor: pointer
       a
         text-decoration: underline
+        transition: .25s $ease
         &:hover
-          text-decoration: none
+          opacity: 0.6
 
 
 .ui-file
@@ -146,8 +148,9 @@
     margin-top: 0.5em
     cursor: pointer
     text-decoration: underline
+    transition: .25s $ease
     &:hover
-      text-decoration: none
+      opacity: 0.6
   &.has-file
     .ui-file__upload
       display: flex
@@ -170,5 +173,6 @@
     position: relative
     cursor: pointer
     text-decoration: underline
+    transition: .25s $ease
     &:hover
-      text-decoration: none
+      opacity: 0.6
