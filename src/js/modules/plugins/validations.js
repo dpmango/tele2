@@ -56,6 +56,15 @@
             x(formData);
           }
         }
+        $(form)
+          .find('input, textarea, select')
+          .val('');
+        $(form)
+          .find('select')
+          .prop('selectedIndex', 0);
+        $(form)
+          .find('select')
+          .selectric('refresh');
       },
       masks: {
         phone: {
