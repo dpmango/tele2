@@ -18,7 +18,7 @@
           var $elm = $(element),
             $wrapper = $elm.closest('.' + data.classes.wrapper);
 
-          $wrapper.find('.label').html($elm.attr('placeholder'));
+          $wrapper.find('.label').html($elm.attr('data-placeholder'));
         },
         onBeforeOpen: function(element, data) {
           var $elm = $(element),
@@ -27,7 +27,7 @@
           $wrapper
             .find('.label')
             .data('value', $wrapper.find('.label').html())
-            .html($elm.attr('placeholder'));
+            .html($elm.attr('data-placeholder'));
         },
         onBeforeClose: function(element, data) {
           var $elm = $(element),

@@ -8,8 +8,8 @@ form(action="#" data-success-function="formValid").form.js-validate-form
       .form__section
         h3.h3-title.form__section-title Выберите нужный тариф:
         .ui-group
-          select(placeholder="Выберите из списка" name="tarif" required).js-select
-            option(disabled selected) Выберите из списка
+          select(data-placeholder="Выберите из списка" name="tarif" required).js-select
+            option(disabled selected value) Выберите из списка
             option(value="s") Компаньон S
             option(value="m") Компаньон M
             option(value="l") Компаньон L
@@ -21,16 +21,16 @@ form(action="#" data-success-function="formValid").form.js-validate-form
           .form__radio
             input(type="radio" name="type" id="type_1" value="type_1" checked)
             label(for="type_1")
-              .form__radio-text Заказать новый номер
-              .form__radio-desc Сим-карта с новым номером оформляется бесплатно
-              .form__radio-hidden Сохранить старый номер можно от любого оператора связи, кроме Tele2
+              span.form__radio-text Заказать новый номер
+              span.form__radio-desc Сим-карта с новым номером оформляется бесплатно
+              span.form__radio-hidden Сохранить старый номер можно от любого оператора связи, кроме Tele2
 
           .form__radio
             input(type="radio" name="type" id="type_2" value="type_2")
             label(for="type_2")
-              .form__radio-text Сохранить старый номер
-              .form__radio-desc Услуга предоставляется на платной основе.
-              .form__radio-hidden Сохранить старый номер можно от любого оператора связи, кроме Tele2
+              span.form__radio-text Сохранить старый номер
+              span.form__radio-desc Услуга предоставляется на платной основе.
+              span.form__radio-hidden Сохранить старый номер можно от любого оператора связи, кроме Tele2
 
       // section
       .form__section
@@ -39,18 +39,18 @@ form(action="#" data-success-function="formValid").form.js-validate-form
           .form__radio
             input(type="radio" name="delivery" id="delivery_1" value="delivery_1" checked)
             label(for="delivery_1")
-              .form__radio-text Самовывоз из любого офиса Теле2
-              .form__radio-hidden Самовывоз из офиса Tele2 бесплатный
+              span.form__radio-text Самовывоз из любого офиса Теле2
+              span.form__radio-hidden Самовывоз из офиса Tele2 бесплатный
           .form__radio
             input(type="radio" name="delivery" id="delivery_2" value="delivery_2")
             label(for="delivery_2")
-              .form__radio-text Доставка курьером
-              .form__radio-hidden Самовывоз из офиса Tele2 бесплатный
+              span.form__radio-text Доставка курьером
+              span.form__radio-hidden Самовывоз из офиса Tele2 бесплатный
           .form__radio
             input(type="radio" name="delivery" id="delivery_3" value="delivery_3")
             label(for="delivery_3")
-              .form__radio-text Доставка Почтой России
-              .form__radio-hidden Самовывоз из офиса Tele2 бесплатный
+              span.form__radio-text Доставка Почтой России
+              span.form__radio-hidden Самовывоз из офиса Tele2 бесплатный
 
       // section
       .form__section
@@ -88,7 +88,7 @@ form(action="#" data-success-function="formValid").form.js-validate-form
         .ui-group
           .ui-input.js-input-focus
             span.ui-input__label Добавьте комментарий к заявке
-            textarea.ui-input__input(type="text" name="comment" rows="3" data-min-rows="3")
+            textarea.ui-input__input(name="comment" rows="3" data-min-rows="3")
 
       // section
       .form__section
