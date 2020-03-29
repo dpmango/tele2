@@ -7,25 +7,26 @@ form(action="#" data-success-function="formValid").form.js-validate-form
       // section
       .form__section
         h3.h3-title.form__section-title Выберите нужный тариф:
-        select(placeholder="Выберите из списка").js-select
-          option(disabled) Выберите из списка
-          option Компаньон S
-          option Компаньон M
-          option Компаньон L
+        .ui-group
+          select(placeholder="Выберите из списка" name="tarif" required).js-select
+            option(disabled selected) Выберите из списка
+            option(value="s") Компаньон S
+            option(value="m") Компаньон M
+            option(value="l") Компаньон L
 
       // section
       .form__section
         h3.h3-title.form__section-title Выберите способ подключения:
         .form__radio-select.form__radio-select--two
           .form__radio
-            input(type="radio" name="type" id="type_1" checked)
+            input(type="radio" name="type" id="type_1" value="type_1" checked)
             label(for="type_1")
               .form__radio-text Заказать новый номер
               .form__radio-desc Сим-карта с новым номером оформляется бесплатно
               .form__radio-hidden Сохранить старый номер можно от любого оператора связи, кроме Tele2
 
           .form__radio
-            input(type="radio" name="type" id="type_2")
+            input(type="radio" name="type" id="type_2" value="type_2")
             label(for="type_2")
               .form__radio-text Сохранить старый номер
               .form__radio-desc Услуга предоставляется на платной основе.
@@ -36,17 +37,17 @@ form(action="#" data-success-function="formValid").form.js-validate-form
         h3.h3-title.form__section-title Выберите способ доставки SIM карты:
         .form__radio-select.form__radio-select--three
           .form__radio
-            input(type="radio" name="delivery" id="delivery_1" checked)
+            input(type="radio" name="delivery" id="delivery_1" value="delivery_1" checked)
             label(for="delivery_1")
               .form__radio-text Самовывоз из любого офиса Теле2
               .form__radio-hidden Самовывоз из офиса Tele2 бесплатный
           .form__radio
-            input(type="radio" name="delivery" id="delivery_2")
+            input(type="radio" name="delivery" id="delivery_2" value="delivery_2")
             label(for="delivery_2")
               .form__radio-text Доставка курьером
               .form__radio-hidden Самовывоз из офиса Tele2 бесплатный
           .form__radio
-            input(type="radio" name="delivery" id="delivery_3")
+            input(type="radio" name="delivery" id="delivery_3" value="delivery_3")
             label(for="delivery_3")
               .form__radio-text Доставка Почтой России
               .form__radio-hidden Самовывоз из офиса Tele2 бесплатный
@@ -57,7 +58,7 @@ form(action="#" data-success-function="formValid").form.js-validate-form
         .ui-group
           .ui-input.js-input-focus
             span.ui-input__label Укажите ФИО
-            input.ui-input__input(type="text" name="firstname" required)
+            input.ui-input__input(type="text" name="name" required)
         .ui-group
           .ui-input.js-input-focus
             span.ui-input__label Укажите контактный номер
@@ -93,7 +94,7 @@ form(action="#" data-success-function="formValid").form.js-validate-form
       .form__section
         .form__checkbox
           .ui-checkbox
-            input(type="checkbox" name="agree" id="agree" checked)
+            input(type="checkbox" name="agree" id="agree" required)
             label(for="agree")
               span
                 a(href="#TERMS").js-popup Согласие на обработку данных

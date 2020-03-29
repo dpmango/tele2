@@ -122,11 +122,11 @@
 .selectric-items
   display: none
   position: absolute
-  top: 100%
+  top: calc(100% - 2px)
   left: 0
   background: #F8F8F8
-  border: 1px solid #c4c4c4
-  z-index: -1
+  border: 2px solid $fontColor
+  z-index: 2
   box-shadow: 0 0 10px -6px
   .selectric-scroll
     height: 100%
@@ -141,35 +141,31 @@
     list-style: none
     padding: 0
     margin: 0
-    font-size: 12px
-    line-height: 20px
-    min-height: 20px
   li
     list-style: none
     padding: 0
     margin: 0
-    font-size: 12px
-    line-height: 20px
-    min-height: 20px
+    font-size: 16px
     display: block
-    padding: 10px
-    color: #666
+    padding: 11px
+    color: $fontColor
     cursor: pointer
+    transition: background .25s $ease
     &.selected
-      background: #E0E0E0
-      color: #444
+      background: #F0F1F2
+      color: $fontColor
     &.highlighted
-      background: #D0D0D0
-      color: #444
+      background: #F0F1F2
+      color: $fontColor
     &:hover
-      background: #D5D5D5
-      color: #444
+      background: #F0F1F2
+      color: $fontColor
   .disabled
     filter: alpha(opacity = 50)
     opacity: 0.5
     cursor: default !important
     background: none !important
-    color: #666 !important
+    color: $fontColor !important
     user-select: none
   .selectric-group
     .selectric-group-label

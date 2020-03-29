@@ -5,6 +5,8 @@
 .ui-group
   position: relative
   margin-bottom: 15px
+  &.has-error
+    margin-bottom: 25px
 
 .ui-input
   position: relative
@@ -56,22 +58,27 @@
 
 .ui-input__validation
   position: absolute
-  bottom: 0px
-  right: 0px
-  color: white
-  background: $colorRed
+  top: calc(100% + 5px)
+  left: 0px
+  color: $colorRed
   text-transform: none
-  font-size: 11px
-  font-weight: 500
-  line-height: 1
-  padding: 3px 5px
+  font-size: 13px
+  line-height: 1.3
   margin: 0
   pointer-events: none
+  &::before
+    display: inline-block
+    content: ' '
+    size: 21px
+    background: svg-load('../icons/svg-colors/invalid.svg') no-repeat center
+    background-size: contain
+    vertical-align: middle
+    margin-right: 7px
+
 
 /* Checkbox
 .ui-checkbox
   input
-    display: none
     width: 0.1px
     height: 0.1px
     opacity: 0
@@ -79,13 +86,19 @@
     top: 0
     left: 0
     &:checked
-      + label
+      + label:not(.ui-input__validation)
         &::before
           background: $fontColor
           border-color: $fontColor
         &::after
           transform: translateY(-50%) scale(1)
-  label
+    &.has-error
+      + label:not(.ui-input__validation)
+        +r($sm)
+          margin-bottom: 50px
+        &::before
+          border-color: $colorRed
+  label:not(.ui-input__validation)
     display: block
     width: 100%
     position: relative
@@ -107,14 +120,14 @@
       transition: all $transitionSpeed ease-in-out
     &::after
       position: absolute
-      left: 6px
+      left: 5px
       top: 50%
       transform: translateY(-50%) scale(0)
       display: inline-block
       content: ' '
-      size: 10px
-      background: $colorGreen
-      border-radius: 50%
+      size: 14px 10px
+      background: svg-load('../icons/svg-mono/check.svg') no-repeat center
+      background-size: contain
       transition: transform .2s ease
     span
       display: inline-block
@@ -128,6 +141,13 @@
         transition: .25s $ease
         &:hover
           opacity: 0.6
+  .ui-input__validation
+    position: static
+    margin-left: 16px
+    +r($sm)
+      position: absolute
+      margin-left: 0
+      top: calc(100% + 10px)
 
 
 .ui-file

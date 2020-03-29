@@ -17,7 +17,7 @@
         if (element.is('select')) {
           error.appendTo(element.closest('.selectric-wrapper'));
         } else if (element.is('input[type="radio"]') || element.is('input[type="checkbox"]')) {
-          error.appendTo(element.closest('.ui-group'));
+          error.appendTo(element.parent().find('label'));
         } else {
           error.appendTo(element.parent('div'));
         }
@@ -28,7 +28,10 @@
         if ($element.is('select')) {
           $element.closest('.selectric-wrapper').addClass('has-error');
         } else {
-          $(element).addClass('has-error');
+          $element.addClass('has-error');
+        }
+        if ($element.closest('.ui-group').length > 0) {
+          $element.closest('.ui-group').addClass('has-error');
         }
       },
       validateUnhighlight: function(element) {
@@ -37,7 +40,10 @@
         if ($element.is('select')) {
           $element.closest('.selectric-wrapper').removeClass('has-error');
         } else {
-          $(element).removeClass('has-error');
+          $element.removeClass('has-error');
+        }
+        if ($element.closest('.ui-group').length > 0) {
+          $element.closest('.ui-group').removeClass('has-error');
         }
       },
       validateSubmitHandler: function(form) {
@@ -133,13 +139,22 @@
             },
           },
           messages: {
+            tarif: {
+              required: 'Выберите тариф из списка',
+            },
+            name: {
+              required: 'Укажите ФИО',
+            },
             email: {
-              required: 'Заполните это поле',
+              required: 'Укажите email',
               email: 'Формат email неверен',
             },
             phone: {
-              required: 'Заполните это поле',
+              required: 'Укажите номер',
               minlength: 'Введите корректный телефон',
+            },
+            agree: {
+              required: 'Требуется согласие',
             },
           },
         };
