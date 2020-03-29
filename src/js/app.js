@@ -41,6 +41,7 @@ var _document = $(document);
       APP.Plugins.Masks.init();
       APP.Plugins.Selectric.init();
       APP.Plugins.InputFocuses.init();
+      APP.Plugins.InputReader.init();
       APP.Plugins.FilterList.init();
       APP.Plugins.TextareaAutoExpand.init();
       APP.Plugins.Validations.init();

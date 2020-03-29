@@ -7,6 +7,7 @@
   APP.Plugins.Validations = {
     init: function() {
       this.localize();
+      this.customValidatorMethods();
       this.validateFormsConstructor();
     },
     data: {
@@ -93,6 +94,19 @@
         min: $.validator.format('Пожалуйста, введите число, большее или равное {0}.'),
       });
     },
+    customValidatorMethods: function() {
+      $.validator.addMethod(
+        'maxfilesize',
+        function(value, element) {
+          if (this.optional(element) || !element.files || !element.files[0]) {
+            return true;
+          } else {
+            return element.files[0].size <= 1024 * 1024 * 5;
+          }
+        },
+        'Файл не может привышать 5Мб.'
+      );
+    },
     validateFormsConstructor: function() {
       var _this = this;
 
@@ -114,6 +128,9 @@
               email: true,
             },
             phone: _this.data.masks.phone,
+            file: {
+              maxfilesize: true,
+            },
           },
           messages: {
             email: {

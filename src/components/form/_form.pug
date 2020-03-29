@@ -70,8 +70,15 @@ form(action="#" data-success-function="formValid").form.js-validate-form
       // section
       .form__section
         h3.h3-title.form__section-title Прикрепите изображения вашего паспорта&nbsp;(не&nbsp;обязательно):
-        .ui-file
-          input(type="file" name="file" id="file")
+        .ui-file.js-file-upload
+          .ui-file__upload
+            .ui-file__upload-icon
+              +svgMono('attached-file')
+            .ui-file__upload-info
+              .ui-file__upload-stats
+              .ui-file__upload-remove.js-remove-file удалить
+
+          input(type="file" name="file" id="file" accept="image/x-png,image/gif,image/jpeg,application/pdf")
           label(for="file") Прикрепить файл
 
       // section

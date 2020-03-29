@@ -129,6 +129,30 @@
 
 
 .ui-file
+  &__upload
+    display: none
+    align-items: flex-start
+  &__upload-icon
+    font-size: 0
+    .ico
+      font-size: 24px
+  &__upload-info
+    margin-top: 0.2em
+    padding-left: 16px
+  &__upload-stats
+    font-size: 16px
+  &__upload-remove
+    font-size: 16px
+    margin-top: 0.5em
+    cursor: pointer
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+  &.has-file
+    .ui-file__upload
+      display: flex
+    label
+      display: none
   input
     display: none
     width: 0.1px
@@ -146,3 +170,5 @@
     position: relative
     cursor: pointer
     text-decoration: underline
+    &:hover
+      text-decoration: none
