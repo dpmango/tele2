@@ -36,6 +36,12 @@
           $wrapper.find('.label').html($wrapper.find('.label').data('value'));
         },
       });
+
+      $select.on('change', function() {
+        $('.form')
+          .validate()
+          .element('select');
+      });
     },
   };
 })(jQuery, window.APP);

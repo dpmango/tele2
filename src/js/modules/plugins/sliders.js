@@ -8,7 +8,7 @@
       responsiveSwipers: {
         tarifSwiper: {
           instances: [],
-          enableOn: 991,
+          enableOn: 992,
         },
       },
     },
