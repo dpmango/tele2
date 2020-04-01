@@ -42,6 +42,25 @@
               }
             });
 
+            setTimeout(hideParents, 200);
+
+            function hideParents() {
+              // clear
+              $('.popup__region').show();
+
+              $listElements.each(function() {
+                var $li = $(this);
+                var $container = $li.closest('.popup__region');
+                var $list = $li.closest('.popup__region-list');
+
+                if ($list.children(':visible').length === 0) {
+                  $container.hide();
+                } else {
+                  $container.show();
+                }
+              });
+            }
+
             // if (shouldHide.length > 0) {
             //   $.each(shouldHide, function(i, li) {
             //     var $li = $(li);
