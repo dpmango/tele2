@@ -12,6 +12,11 @@ html(lang="ru")
       .page__content
         block content
 
+        .svg-sprites(style="height: 0; width: 0; position: absolute; visibility: hidden;")
+          include ../../../dist/img/sprite-mono.svg
+          include ../../../dist/img/sprite-color.svg
+
+
       block footer
         include ../../components/footer/_footer
 
